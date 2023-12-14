@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not found</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css')}}">
+</head>
+<body>
+  <div class="banner">
+    <h1>No data found for {{ city }}</h1>
+    <span>Try again!</span>
+  </div>
+  <div class="user-input">
+    <form action="/weather">
+    <input type="text" name="city" id="city" placeholder="Enter a city">
+    <button type="submit">submit</button>
+    </form>
+  </div>
+</body>
+</html>
