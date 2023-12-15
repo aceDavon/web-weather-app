@@ -33,6 +33,6 @@ def get_weather():
 if __name__ == '__main__':
     configure_logging()
     try:
-        serve(app, host='localhost', port=8080)
+        serve(app, host='localhost', port=8000)
     except Exception as e:
         print(f"An error occurred: {e}")
