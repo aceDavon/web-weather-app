@@ -25,7 +25,7 @@ def get_weather():
         return render_template('not_found.html', city=city)
 
     if weather:
-        return render_template('weather.html', title=weather['name'], temp=f"{weather['main']['temp']:.1f}", feels_like=f"{weather['main']['feels_like']:.1f}")
+        return render_template('weather.html', title=weather['name'], temp=f"{weather['main']['temp']:.1f}", feels_like=f"{weather['main']['feels_like']:.1f}", description=f"{weather['weather'][0]['description']}")
     else:
         return render_template('weather.html', title="Error", temp="N/A", feels_like="N/A")
 
